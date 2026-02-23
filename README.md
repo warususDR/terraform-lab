@@ -5,7 +5,7 @@ This repository contains a Terraform configuration for automating the deployment
 
 ## Architecture
 The configuration provisions the following resources:
-* **Compute (AWS EC2):** Two `t3.micro` instances (`web_server` and `app_server`) running Amazon Linux 2023.
+* **Compute (AWS EC2):** Two `t3.nano` instances (`web_server` and `app_server`) running Amazon Linux 2023.
 * **Network Security (AWS Security Groups):** * A public-facing security group for the `web_server` allowing inbound HTTP, HTTPS, and SSH traffic.
   * A restricted security group for the `app_server` restricting port 8080 traffic exclusively to requests originating from the `web_server`'s security group.
 * **DNS Management (Cloudflare & AWS Route 53):** * Creation of an AWS Route 53 Hosted Zone for a designated subdomain.
